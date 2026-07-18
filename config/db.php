@@ -16,5 +16,6 @@ function getDbConnection(): mysqli
     }
 
     $connection->set_charset('utf8mb4');
+
     return $connection;
 }

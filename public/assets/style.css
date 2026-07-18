@@ -1,0 +1,252 @@
+:root {
+    --bg: #f3f7fb;
+    --panel: #ffffff;
+    --line: #d7e0ea;
+    --primary: #0b3d91;
+    --primary-dark: #072f72;
+    --text: #1f2933;
+    --muted: #52606d;
+    --danger-bg: #fde8e8;
+    --danger-border: #f8b4b4;
+    --danger-text: #9b1c1c;
+    --success-bg: #e6fffa;
+    --success-border: #84e1bc;
+    --success-text: #03543f;
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.topbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    background: linear-gradient(120deg, var(--primary), #1257c0);
+    color: #fff;
+    padding: 1.1rem 1.5rem;
+}
+
+.topbar h1 {
+    margin: 0.2rem 0 0;
+    font-size: 1.35rem;
+}
+
+.eyebrow {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 0.88rem;
+}
+
+.session-user {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+    padding: 0.75rem 1.5rem;
+}
+
+.nav a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    padding: 0.4rem 0.65rem;
+}
+
+.nav a:hover {
+    background: #eaf2ff;
+}
+
+.logout-link {
+    margin-left: auto;
+}
+
+.container {
+    max-width: 1120px;
+    margin: 1rem auto;
+    padding: 0 1rem 2rem;
+}
+
+.container.small {
+    max-width: 640px;
+}
+
+.panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(31, 41, 51, 0.05);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+h2,
+h3 {
+    margin-top: 0;
+}
+
+.hint {
+    color: var(--muted);
+    margin-top: -0.3rem;
+}
+
+form {
+    display: grid;
+    gap: 0.8rem;
+}
+
+label {
+    display: grid;
+    gap: 0.35rem;
+    font-weight: 600;
+}
+
+input,
+select,
+textarea,
+button {
+    width: 100%;
+    padding: 0.58rem 0.62rem;
+    border: 1px solid #bcc7d4;
+    border-radius: 6px;
+    font: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #8db2ff;
+    border-color: #5f8df1;
+}
+
+button {
+    border: none;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--primary-dark);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+th,
+td {
+    border: 1px solid var(--line);
+    padding: 0.5rem;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background: #eff4fb;
+}
+
+.error {
+    background: var(--danger-bg);
+    border: 1px solid var(--danger-border);
+    color: var(--danger-text);
+    padding: 0.75rem;
+    border-radius: 6px;
+}
+
+.success {
+    background: var(--success-bg);
+    border: 1px solid var(--success-border);
+    color: var(--success-text);
+    padding: 0.75rem;
+    border-radius: 6px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    display: grid;
+    gap: 0.4rem;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.card span {
+    font-size: 1.4rem;
+}
+
+.inline-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.inline-form input {
+    flex: 1;
+    min-width: 240px;
+}
+
+.clear-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.invalid {
+    border-color: #e02424;
+    background: #fff5f5;
+}
+
+.field-error {
+    margin: -0.2rem 0 0;
+    color: var(--danger-text);
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.footer {
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    text-align: center;
+    padding: 1rem;
+    background: #fff;
+}
+
+@media (max-width: 820px) {
+    .logout-link {
+        margin-left: 0;
+    }
+
+    table {
+        font-size: 0.92rem;
+    }
+}

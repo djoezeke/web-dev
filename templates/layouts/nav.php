@@ -3,5 +3,5 @@
     <a href="/customers.php">Customers</a>
     <a href="/vehicles.php">Vehicles</a>
     <a href="/services.php">Services</a>
-    <a href="/logout.php">Logout</a>
+    <a class="logout-link" href="/logout.php">Logout</a>
 </nav>

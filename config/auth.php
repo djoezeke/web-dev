@@ -24,7 +24,7 @@ function requireLogin(): void
 function loginAdmin(string $username, string $password): bool
 {
     $db = getDbConnection();
-    $stmt = $db->prepare('SELECT id, password_hash FROM admins WHERE username = ? LIMIT 1');
+    $stmt = $db->prepare('SELECT id, password_hash FROM users WHERE username = ? LIMIT 1');
     $stmt->bind_param('s', $username);
     $stmt->execute();
     $result = $stmt->get_result();
