@@ -12,8 +12,11 @@ declare(strict_types=1);
 </head>
 <body>
 <header class="topbar">
-    <h1>Vehicle Service Management System</h1>
+    <div>
+        <p class="eyebrow">🚗 University Assignment Project</p>
+        <h1>Vehicle Service Management System</h1>
+    </div>
     <?php if (isset($_SESSION['admin_username'])): ?>
-        <p>Logged in as <strong><?= htmlspecialchars((string) $_SESSION['admin_username']) ?></strong></p>
+        <p class="session-user">👤 Logged in as <strong><?= htmlspecialchars((string) $_SESSION['admin_username']) ?></strong></p>
     <?php endif; ?>
 </header>

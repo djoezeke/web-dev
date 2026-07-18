@@ -1,7 +1,7 @@
 CREATE DATABASE IF NOT EXISTS vehicle_service_management;
 USE vehicle_service_management;
 
-CREATE TABLE IF NOT EXISTS admins (
+CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) NOT NULL UNIQUE,
     password_hash VARCHAR(255) NOT NULL,
@@ -42,7 +42,3 @@ CREATE TABLE IF NOT EXISTS services (
     CONSTRAINT fk_services_vehicle FOREIGN KEY (vehicle_id)
         REFERENCES vehicles(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
-
-INSERT INTO admins (username, password_hash)
-SELECT 'admin', '$2y$10$igVCerAQLA0tXb9TkPS0ReGjbFEANwBYyJhWeQkyzUDV6ZEhoAP3O'
-WHERE NOT EXISTS (SELECT 1 FROM admins WHERE username = 'admin');
